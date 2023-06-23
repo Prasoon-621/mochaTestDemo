@@ -6,7 +6,7 @@ const workouts=require('./Router/workout')
 mongoose.set('strictQuery', false);
 
 app.use(express.json())
-app.use('/api/workouts',workouts)
+app.use('/api/signup',workouts)
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
@@ -19,3 +19,4 @@ mongoose.connect(process.env.MONGO_URI)
    console.log(error)
 })
 
+module.exports = app;

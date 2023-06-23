@@ -7,11 +7,11 @@ const WorkSchema = new schema({
         required: true
     },
     password: {
-        type: Number,
+        type: String,
         required: true
     },
-    age: {
-        type: Number,
+    email: {
+        type: String,
         required: true
     }
 })
