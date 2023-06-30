@@ -15,7 +15,7 @@ describe('API TESTING', () => {
         };
         const res = await chai.request(server).post('/api/signup').send(userData);
         expect(res).to.have.status(200);
-        expect(res.body.user).to.have.property('_id');
+        expect(res.body).to.have.property('_id');
     });
 });
 

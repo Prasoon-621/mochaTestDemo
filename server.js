@@ -10,9 +10,9 @@ app.use('/api/signup',workouts)
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
-  console.log("mongoose connected")
+//   console.log("mongoose connected")
   app.listen(process.env.PORT,()=>{
-   console.log("listening on Port",process.env.PORT)
+   // console.log("listening on Port",process.env.PORT)
 })
 })
 .catch((error)=>{

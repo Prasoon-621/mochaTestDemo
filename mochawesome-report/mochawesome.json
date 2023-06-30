@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-06-27T04:33:52.098Z",
+    "end": "2023-06-27T04:33:52.216Z",
+    "duration": 118,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7cb59a47-8b52-47f8-a949-813758c34a9c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ef53eb0c-c1c4-47bb-aba3-ba5edb9c2152",
+          "title": "FIRST Test Suite",
+          "fullFile": "/home/prasoon/test/study purpose/mongo/backend/test/first.js",
+          "file": "/test/first.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should pass",
+              "fullTitle": "FIRST Test Suite should pass",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const sum = 1 + 1;\nexpect(sum).to.equal(2);",
+              "err": {},
+              "uuid": "c8c12c14-b9d0-4458-97f8-12ca07fa9a14",
+              "parentUUID": "ef53eb0c-c1c4-47bb-aba3-ba5edb9c2152",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c8c12c14-b9d0-4458-97f8-12ca07fa9a14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c284981e-86c7-4cfe-a824-8eba91cc9cd4",
+          "title": "SECOND TEST",
+          "fullFile": "/home/prasoon/test/study purpose/mongo/backend/test/second.js",
+          "file": "/test/second.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should NOT  pass",
+              "fullTitle": "SECOND TEST should NOT  pass",
+              "timedOut": false,
+              "duration": 2,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const sum = 1 + 1;\nexpect(sum).to.equal(3);",
+              "err": {
+                "message": "AssertionError: expected 2 to equal 3",
+                "estack": "AssertionError: expected 2 to equal 3\n    at Context.<anonymous> (test/second.js:7:20)\n    at process.processImmediate (node:internal/timers:476:21)",
+                "diff": "- 2\n+ 3\n"
+              },
+              "uuid": "2179b859-e3ca-4caf-bf48-b7cdcd7dbb0a",
+              "parentUUID": "c284981e-86c7-4cfe-a824-8eba91cc9cd4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2179b859-e3ca-4caf-bf48-b7cdcd7dbb0a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "22eeaf53-d98f-4301-a54f-335295820610",
+          "title": "API TESTING",
+          "fullFile": "/home/prasoon/test/study purpose/mongo/backend/test/signup.test.js",
+          "file": "/test/signup.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API 1: /api/signup",
+              "fullTitle": "API TESTING API 1: /api/signup",
+              "timedOut": false,
+              "duration": 85,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const userData = {\n    \"name\": 'Manu',\n    \"password\": '12345',\n    \"email\": 'dfsdf@gmail',\n};\nconst res = await chai.request(server).post('/api/signup').send(userData);\nexpect(res).to.have.status(200);\nexpect(res.body).to.have.property('_id');",
+              "err": {},
+              "uuid": "6e5c5485-53ff-4052-90ed-7de6725737df",
+              "parentUUID": "22eeaf53-d98f-4301-a54f-335295820610",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e5c5485-53ff-4052-90ed-7de6725737df"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 85,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
